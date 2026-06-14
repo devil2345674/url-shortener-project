@@ -1,0 +1,354 @@
+/* ==============================
+   GOOGLE FONT
+================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ==============================
+   GLOBAL STYLES
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+
+    overflow: hidden;
+}
+
+/* ==============================
+   CONTAINER
+================================= */
+
+.container {
+
+    width: 420px;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.2);
+
+    border:
+        1px solid rgba(255,255,255,0.2);
+
+    text-align: center;
+
+    animation: fadeIn 1s ease;
+}
+
+/* ==============================
+   TITLE
+================================= */
+
+.container h1 {
+
+    color: white;
+
+    margin-bottom: 25px;
+
+    font-size: 32px;
+
+    font-weight: 600;
+}
+
+/* ==============================
+   INPUT FIELD
+================================= */
+
+input {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    margin-bottom: 20px;
+
+    background: rgba(255,255,255,0.2);
+
+    color: white;
+
+    transition: 0.3s;
+}
+
+input::placeholder {
+
+    color: rgba(255,255,255,0.7);
+}
+
+input:focus {
+
+    background: rgba(255,255,255,0.3);
+
+    transform: scale(1.02);
+}
+
+/* ==============================
+   BUTTON
+================================= */
+
+button {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: white;
+
+    color: #764ba2;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* ==============================
+   RESULT SECTION
+================================= */
+
+#result {
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.15);
+
+    color: white;
+
+    word-break: break-word;
+
+    font-size: 15px;
+}
+
+/* ==============================
+   LINK STYLE
+================================= */
+
+#result a {
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+#result a:hover {
+
+    text-decoration: underline;
+}
+
+/* ==============================
+   ANIMATION
+================================= */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==============================
+   MOBILE RESPONSIVE
+================================= */
+
+@media (max-width: 500px) {
+
+    .container {
+
+        width: 90%;
+        padding: 30px;
+    }
+
+    .container h1 {
+
+        font-size: 26px;
+    }
+}
+/* ==============================
+   RESULT BOX
+================================= */
+
+.result-box {
+
+    animation: popUp 0.5s ease;
+}
+
+/* ==============================
+   SUCCESS TEXT
+================================= */
+
+.success-text {
+
+    margin-bottom: 10px;
+
+    font-weight: 600;
+
+    color: #00ffcc;
+}
+
+/* ==============================
+   ERROR TEXT
+================================= */
+
+.error {
+
+    color: #ff4d4d;
+
+    font-weight: 600;
+}
+
+/* ==============================
+   QR CODE
+================================= */
+
+#qrContainer {
+
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+}
+
+canvas {
+
+    background: white;
+
+    padding: 10px;
+
+    border-radius: 10px;
+
+    animation: fadeIn 1s ease;
+}
+
+/* ==============================
+   POPUP ANIMATION
+================================= */
+
+@keyframes popUp {
+
+    from {
+
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ==============================
+   FLOATING BACKGROUND CIRCLES
+================================= */
+
+body::before,
+body::after {
+
+    content: '';
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.1);
+
+    animation: float 8s infinite ease-in-out;
+}
+
+body::before {
+
+    width: 300px;
+    height: 300px;
+
+    top: -100px;
+    left: -100px;
+}
+
+body::after {
+
+    width: 250px;
+    height: 250px;
+
+    bottom: -100px;
+    right: -100px;
+}
+
+@keyframes float {
+
+    0% {
+
+        transform: translateY(0px);
+    }
+
+    50% {
+
+        transform: translateY(-20px);
+    }
+
+    100% {
+
+        transform: translateY(0px);
+    }
+}

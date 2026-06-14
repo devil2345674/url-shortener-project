@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>URL Shortener</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Simple URL Shortener</h1>
+
+        <input
+            type="text"
+            id="urlInput"
+            placeholder="Enter Long URL"
+        >
+
+        <button onclick="shortenUrl()">
+            Shorten URL
+        </button>
+
+        <div id="result"></div>
+
+<div id="qrContainer">
+    <canvas id="qrCode"></canvas>
+</div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+
+</body>
+</html>
